@@ -11,7 +11,7 @@
  <h1>Saisie d'un nouveau film</h1>
  <section>
     {% if id != '' %}
-        <form method="post" action="/stream/updaterevu/{{id}}/">
+        <form method="post" action="/stream/updaterevu/{{.id}}/">
      {% else %}
         <form method="post" action="/stream/revu/">
      {% endif %}
