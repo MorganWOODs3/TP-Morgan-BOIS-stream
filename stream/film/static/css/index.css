@@ -6,8 +6,25 @@ margin:auto;
 
 h1{
 text-align: center;
+text-shadow: 2px 2px #DEB887;
 }
 
 section{
 text-align: center;
+
+}
+
+nav{
+    display: table;
+    width: 100%;
+    background-color:#DEB887;
+    margin: 3px;
+    border-radius: 10px;
+
+}
+nav a{
+    display: table-cell;
+    width: 3%;
+    text-align: center;
+
 }
