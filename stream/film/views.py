@@ -26,7 +26,7 @@ def index(request):
 
 def affiche(request, id):
     film = models.Film.objects.get( pk = id)
-    return render(request,"film/affiche.html",{"film": film})
+    return render(request,"film/ajout.html",{"film": film})
 
 def update(request, id):
     film = models.Film.objects.get(pk=id)
