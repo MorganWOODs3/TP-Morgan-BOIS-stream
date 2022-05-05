@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulaire de saisi</title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
 </head>
 <body>
  <h1>Saisie d'un nouveau film</h1>
+ <section>
     {% if id != '' %}
         <form method="post" action="/stream/updaterevu/{{id}}/">
      {% else %}
@@ -14,6 +18,8 @@
     {% csrf_token%}
     {{form.as_ul}}
       <input type="submit" value="envoyer les données"/>
-  </form>
+     </form>
+
+  </section>
 </body>
 </html>

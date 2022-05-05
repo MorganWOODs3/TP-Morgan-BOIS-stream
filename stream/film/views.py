@@ -31,7 +31,7 @@ def affiche(request, id):
 def update(request, id):
     film = models.Film.objects.get(pk=id)
     form = FilmForm(film.dico())
-    return render(request,"film/ajout.html", {"from": form,"id": id})
+    return render(request,"film/ajout.html", {"from": form, "id": id})
 
 def updaterevu(request, id):
     lform = FilmForm(request.POST)
@@ -42,3 +42,11 @@ def updaterevu(request, id):
         return HttpResponseRedirect("/stream/")
     else:
         return render(request, "film/ajout.html", {"form": lform, "id": id})
+
+def delete(request, id):
+    film = models.Film.objects.get(pk=id)
+    film.delete()
+    return HttpResponseRedirect("/stream/")
+
+
+

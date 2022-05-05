@@ -1,2 +1,13 @@
-h1{color: rebeccapurple;
+body{
+background-color: #FAEBD7;
+width:80%;
+margin:auto;
+}
+
+h1{
+text-align: center;
+}
+
+section{
+text-align: center;
 }
