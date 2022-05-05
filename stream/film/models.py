@@ -10,5 +10,5 @@ class Film(models.Model):
     resume = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        chaine= f"{self.titre} écrit par {self.realisateur} et avec {self.dure} minutes, édité le {self.date_parution} et voici le résumer {self.resume}."
+        chaine= f"titre{self.titre} écrit par {self.realisateur} et avec {self.dure} minutes, édité le {self.date_parution} et voici le résumer {self.resume}."
         return chaine

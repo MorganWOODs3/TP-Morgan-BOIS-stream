@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from. forms import FilmForm
 from . import models
 
@@ -14,8 +14,8 @@ def ajout(request):
 def revu(request):
     lform = FilmForm(request.POST)
     if lform.is_valid():
-        livre = lform.save()
-        return render(request, "film/revu.html", {"film": livre})
+        film = lform.save()
+        return HttpResponseRedirect("/stream/")
     else :
         return render(request, "film/ajout.html", {"form": lform})
 
@@ -23,3 +23,22 @@ def revu(request):
 def index(request):
     liste = list(models.Film.objects.all())
     return render(request,"film/index.html",{"list" : liste})
+
+def affiche(request, id):
+    film = models.Film.objects.get( pk = id)
+    return render(request,"film/affiche.html",{"film": film})
+
+def update(request, id):
+    film = models.Film.objects.get(pk=id)
+    form = FilmForm(film.dico())
+    return render(request,"film/ajout.html", {"from": form,"id": id})
+
+def updaterevu(request, id):
+    lform = FilmForm(request.POST)
+    if lform.is_valid():
+        film = lform.save(commit = False)
+        film.id = id
+        film.save()
+        return HttpResponseRedirect("/stream/")
+    else:
+        return render(request, "film/ajout.html", {"form": lform, "id": id})

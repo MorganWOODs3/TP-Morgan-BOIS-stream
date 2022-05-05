@@ -9,7 +9,7 @@
 <a href="/stream/ajout">ajouter un film</a>
 <ol>
     {% for l in list %}
-        <li>{{l}}</li>
+        <li>{{l}} <a href="/stream/affiche/{{l.id}}/">affiche</a> <a href="/stream/update/{{l.id}}/">update</a> </li>
     {% endfor %}
 </ol>
 </body>
