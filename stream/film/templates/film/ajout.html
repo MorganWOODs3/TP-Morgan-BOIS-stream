@@ -18,10 +18,10 @@
 
  </nav>
  <section>
-    {% if id != '' %}
-        <form method="post" action="/stream/updaterevu/{{.id}}/">
-     {% else %}
+    {% if id == None %}
         <form method="post" action="/stream/revu/">
+     {% else %}
+       <form method="post" action="/stream/updaterevu/{{id}}/">
      {% endif %}
     {% csrf_token%}
     {{form.as_ul}}
