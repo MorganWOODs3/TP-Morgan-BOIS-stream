@@ -22,7 +22,7 @@ def revu(request):
 
 def index(request):
     liste = list(models.Film.objects.all())
-    return render(request,"film/index.html",{"list": liste})
+    return render(request,"film/index.html",{"liste": liste})
 
 def affiche(request, id):
     film = models.Film.objects.get( pk = id)
