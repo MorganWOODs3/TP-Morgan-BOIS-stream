@@ -1,0 +1,20 @@
+{% extends 'film/main.html' %}
+    <title>index</title>
+{% block content %}
+<body>
+<h1> Bienvenue sur la bibliothèque de site: </h1>
+
+
+<ol>
+    {% for l in liste %}
+    <li> Titre: {{l.titre}} <br>
+            <a href="/stream/affichesite/{{l.id}}/">affiche</a>
+            <a href="/stream/updatesite/{{l.id}}/">update</a>
+            <a href="/stream/deletesite/{{l.id}}/">delete</a>
+        </li>
+    {% endfor %}
+</ol>
+</body>
+</html>
+{% endblock %}
+

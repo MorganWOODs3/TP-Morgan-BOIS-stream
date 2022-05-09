@@ -14,14 +14,11 @@ class FilmForm(ModelForm):
             'remume': _('Résumé')
         }
 
-class VadrazForm(ModelForm):
+class SiteForm(ModelForm):
     class Meta:
-        model = models.Film
+        model = models.Site
         fields = ('titre', 'url')
         labels = {
             'titre': _('Titre'),
-            'url': _('Réalisateur'),
-            'date_parution': _('Date de parution'),
-            'dure': _('Duré du film'),
-            'remume': _('Résumé')
+            'url': _('URL')
         }

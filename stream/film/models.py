@@ -17,8 +17,7 @@ class Film(models.Model):
     def dico(self):
         return {"titre" : self.titre, "realisateur" : self.realisateur, "date_parution" : self.date_parution, "dure" : self.dure, "resume" : self.resume}
 
-
- class Vadraz(models.Model):
+class Site(models.Model):
         titre = models.CharField(max_length=100)
         url = models.CharField(max_length=100)
 
@@ -27,4 +26,4 @@ class Film(models.Model):
             return chaine
 
         def dico(self):
-            return {"titre": self.titre, "realisateur": self.url,}
+            return {"titre": self.titre, "realisateur": self.url}
