@@ -19,14 +19,17 @@ def revu(request):
     else :
         return render(request, "film/ajout.html", {"form": lform})
 
-
+def centre(request):
+    liste = list(models.Film.objects.all())
+    return render(request, "film/centre.html", {"liste": liste})
 def index(request):
     liste = list(models.Film.objects.all())
-    return render(request,"film/index.html",{"liste": liste})
+    return render(request, "film/index.html", {"liste": liste})
+
 
 def affiche(request, id):
     film = models.Film.objects.get( pk = id)
-    return render(request,"film/ajout.html",{"film": film})
+    return render(request, "film/affiche.html", {"film": film})
 
 def update(request, id):
     film = models.Film.objects.get(pk=id)

@@ -13,3 +13,15 @@ class FilmForm(ModelForm):
             'dure': _('Duré du film'),
             'remume': _('Résumé')
         }
+
+class VadrazForm(ModelForm):
+    class Meta:
+        model = models.Film
+        fields = ('titre', 'url')
+        labels = {
+            'titre': _('Titre'),
+            'url': _('Réalisateur'),
+            'date_parution': _('Date de parution'),
+            'dure': _('Duré du film'),
+            'remume': _('Résumé')
+        }

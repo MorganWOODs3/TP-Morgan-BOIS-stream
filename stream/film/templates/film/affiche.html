@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>affichage {{Film.titre}}</title>
+{% extends 'film/main.html' %}
 
-</head>
+
+    <title>affichage {{film.titre}}</title>
+{% block content %}
 <body>
-    {{film}} paru le {{film.date_parution}}
+
+    <h1>Résumé du film {{film.titre}}</h1>
+
+    {{film.titre}} paru le {{film.date_parution}}
 
     <p>
         {{film.resume}}
     </p>
+<img src="https://media.giphy.com/media/vBjLa5DQwwxbi/giphy.gif">
 </body>
 </html>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+  {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+</head>
+<body>
+
+
+ <nav>
+     <a href="/stream/">Bibliothèque</a>
+     <a href="/stream/ajout/">Ajouter un film</a>
+     <a href="/stream/centre/">Accueille</a>
+     <a href="/stream/site">Ajouter un site de stream</a>
+     <a href="/stream/sitestream">Bibliothèque de stream</a>
+
+ </nav>
+
+{% block content %}
+{% endblock %}

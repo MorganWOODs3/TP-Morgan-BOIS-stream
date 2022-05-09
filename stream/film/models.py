@@ -11,8 +11,20 @@ class Film(models.Model):
 
 
     def __str__(self):
-        chaine = f"titre{self.titre} écrit par {self.realisateur} et avec {self.dure} minutes, édité le {self.date_parution} et voici le résumer {self.resume} er{self.dico}."
+        chaine = f"Titre: {self.titre} écrit par {self.realisateur} et avec {self.dure} minutes, édité le {self.date_parution} et voici le résumer {self.resume} ."
         return chaine
 
     def dico(self):
         return {"titre" : self.titre, "realisateur" : self.realisateur, "date_parution" : self.date_parution, "dure" : self.dure, "resume" : self.resume}
+
+
+ class Vadraz(models.Model):
+        titre = models.CharField(max_length=100)
+        url = models.CharField(max_length=100)
+
+        def __str__(self):
+            chaine = f"Titre: {self.titre} écrit par {self.url} ."
+            return chaine
+
+        def dico(self):
+            return {"titre": self.titre, "realisateur": self.url,}

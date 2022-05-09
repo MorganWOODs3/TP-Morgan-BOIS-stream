@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'film/main.html' %}
     <title>index</title>
-    {% load static %}
-
-    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
-</head>
+{% block content %}
 <body>
-<h1> bienvenue sur ma bibliotheque de film</h1>
-<a href="/stream/ajout/">ajouter un film</a>
+<h1> Bienvenue sur la bibliothèque de film: </h1>
+
+
 <ol>
     {% for l in liste %}
-        <li>  {{l}} <a href="/stream/affiche/{{l.id}}/">affiche</a> <a href="/stream/update/{{l.id}}/">update</a> <a href="/stream/delete/{{l.id}}/">delete</a></li>
+    <li> Titre: {{l.titre}} <br>
+            Écrit par {{l.realisateur}} aparue le {{l.date_parution}} et d'une durée de {{l.dure}} minutes. Pour le résumé click sur affiche ->
+            <a href="/stream/affiche/{{l.id}}/">affiche</a>
+            <a href="/stream/update/{{l.id}}/">update</a>
+            <a href="/stream/delete/{{l.id}}/">delete</a>
+        </li>
     {% endfor %}
 </ol>
 </body>
 </html>
+{% endblock %}
+
