@@ -1,13 +1,13 @@
 from django.db import models
 
 cat = [
-    ('Ac', 'Action'),
-    ('An', 'Animation'),
-    ('Av', 'Aventure'),
-    ('Ho', 'Horreur'),
-    ('Fa', 'Fantastique'),
-    ('Sf', 'Science Fiction'),
-    ('Ge', 'Guerre'),
+    ('Action', 'Action'),
+    ('Animation', 'Animation'),
+    ('Aventure', 'Aventure'),
+    ('Horreur', 'Horreur'),
+    ('Fantastique', 'Fantastique'),
+    ('Science Fiction', 'Science Fiction'),
+    ('Guerre', 'Guerre'),
 ]
 # Create your models here.
 class Film(models.Model):
@@ -30,11 +30,12 @@ class Film(models.Model):
 class Site(models.Model):
         titre = models.CharField(max_length=100)
         url = models.CharField(max_length=100)
+        resume = models.TextField(null=True, blank=True)
 
         def __str__(self):
-            chaine = f"Titre: {self.titre} écrit par {self.url} ."
+            chaine = f"Titre: {self.titre} écrit par {self.url} et le résumé est {self.resume} ."
             return chaine
 
         def dico(self):
-            return {"titre": self.titre, "realisateur": self.url}
+            return {"titre": self.titre, "realisateur": self.url, "resume": self.resume}
 

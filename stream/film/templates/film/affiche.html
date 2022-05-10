@@ -4,16 +4,14 @@
     <title>affichage {{film.titre}}</title>
 {% block content %}
 <body>
-
     <h1>Résumé du film {{film.titre}}</h1>
 
-    {{film.titre}} paru le {{film.date_parution}}
-
+    {{film.titre}} paru le {{film.date_parution}} et est de type {{film.cat}}
+        {% load static %}
     <p>
         {{film.resume}}
+
     </p>
 
-</body>
-</html>
 
 {% endblock %}

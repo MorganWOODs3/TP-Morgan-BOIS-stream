@@ -1,7 +1,7 @@
 body{
-background-color: #FAEBD7;
-width:80%;
-margin:auto;
+    background-color : #808B96;
+    width: 80%;
+    margin: auto;
 }
 
 h1{
@@ -11,6 +11,7 @@ text-shadow: 2px 2px #DEB887;
 
 section{
 text-align: center;
+text-shadow: 2px 2px #DEB887;
 }
 
 nav{
@@ -18,11 +19,28 @@ nav{
     width: 100%;
     background-color:#DEB887;
     margin: 3px;
-    border-radius: 10px;
 
 }
 nav a{
     display: table-cell;
     width: 3%;
     text-align: center;
+}
+p{
+
+    color:black;
+}
+
+img{
+   width: 35%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer{text-align: center;
+    display: table;
+    width: 100%;
+    background-color:#DEB887;
+    margin: 3px;
+
 }

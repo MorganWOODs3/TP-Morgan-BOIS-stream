@@ -3,17 +3,16 @@
 
     <title>affichage {{site.titre}}</title>
 {% block content %}
-<body>
 
-    <h1>Résumé du film {{film.titre}}</h1>
 
-    {{film.titre}} paru le {{film.date_parution}}
+    <h1>Détail du site: {{site.titre}}</h1>
+
+    {{site.titre}} dont l'url est :  {{site.url}}
 
     <p>
-        {{film.resume}}
+        {{site.resume}}
     </p>
 
-</body>
-</html>
+
 
 {% endblock %}

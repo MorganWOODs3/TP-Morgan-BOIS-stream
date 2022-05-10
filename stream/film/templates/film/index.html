@@ -7,11 +7,13 @@
 
 <ol>
     {% for l in liste %}
-    <li> Titre: {{l.titre}} <br>
-            Écrit par {{l.realisateur}} aparue le {{l.date_parution}},dans la catégorie {{l.cat}} et d'une durée de {{l.dure}} minutes. Pour le résumé click sur affiche ->
+    <li> <p class="titre">Titre: {{l.titre}}<br></p>
+            <p>Écrit par {{l.realisateur}} aparue le {{l.date_parution}},dans la catégorie {{l.cat}} et d'une durée de {{l.dure}} minutes. Pour le résumé click sur affiche ->
+
             <a href="/stream/affiche/{{l.id}}/">affiche</a>
             <a href="/stream/update/{{l.id}}/">update</a>
             <a href="/stream/delete/{{l.id}}/">delete</a>
+          </p>
         </li>
     {% endfor %}
 </ol>

@@ -18,8 +18,9 @@ class FilmForm(ModelForm):
 class SiteForm(ModelForm):
     class Meta:
         model = models.Site
-        fields = ('titre', 'url')
+        fields = ('titre', 'url', 'resume')
         labels = {
             'titre': _('Titre'),
-            'url': _('URL')
+            'url': _('URL'),
+            'resume': _('Résumé')
         }

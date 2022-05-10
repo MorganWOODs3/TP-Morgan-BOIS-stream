@@ -97,7 +97,7 @@ def updaterevusite(request, id):
         site = lform.save(commit = False)
         site.id = id
         site.save()
-        return HttpResponseRedirect("/stream/")
+        return HttpResponseRedirect("/stream/ajoutsite/")
     else:
         return render(request, "film/ajoutsite.html", {"form": lform, "id": id})
 
