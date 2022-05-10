@@ -1,23 +1,23 @@
 body{
-    background-color : #808B96;
+    background-color : #89CFF0;
     width: 80%;
     margin: auto;
 }
 
 h1{
 text-align: center;
-text-shadow: 2px 2px #DEB887;
+text-shadow: 1px 1px #007FFF;
 }
 
 section{
 text-align: center;
-text-shadow: 2px 2px #DEB887;
+
 }
 
 nav{
     display: table;
     width: 100%;
-    background-color:#DEB887;
+    background-color:#7CB9E8;
     margin: 3px;
 
 }
@@ -25,7 +25,11 @@ nav a{
     display: table-cell;
     width: 3%;
     text-align: center;
+
+   text-decoration : none;
+   font-weight: bold;
 }
+
 p{
 
     color:black;
@@ -40,7 +44,12 @@ img{
 footer{text-align: center;
     display: table;
     width: 100%;
-    background-color:#DEB887;
+    background-color:#7CB9E8;
     margin: 3px;
+    font-weight: bold;
 
+}
+
+.ti{
+    font-weight: bold;
 }

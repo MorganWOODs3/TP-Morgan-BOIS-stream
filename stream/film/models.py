@@ -1,4 +1,5 @@
 from django.db import models
+import uuid
 
 cat = [
     ('Action', 'Action'),
@@ -17,11 +18,13 @@ class Film(models.Model):
     dure = models.IntegerField(blank=False)
     cat = models.CharField(max_length=30, choices=cat)
     resume = models.TextField(null=True, blank=True)
+    imaurl=models.URLField(max_length=300)
+
 
 
 
     def __str__(self):
-        chaine = f"Titre: {self.titre} écrit par {self.realisateur}, dans la catégorie{self.cat} et avec une durée de {self.dure} minutes. Édité le {self.date_parution} et voici le résumer {self.resume} ."
+        chaine = f"Titre: {self.titre} écrit par {self.realisateur}, dans la catégorie{self.cat} et avec une durée de {self.dure} minutes. Édité le {self.date_parution} et voici le résumer {self.resume}."
         return chaine
 
     def dico(self):
@@ -38,4 +41,8 @@ class Site(models.Model):
 
         def dico(self):
             return {"titre": self.titre, "realisateur": self.url, "resume": self.resume}
+
+
+
+
 

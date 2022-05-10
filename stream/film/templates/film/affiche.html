@@ -7,11 +7,12 @@
     <h1>Résumé du film {{film.titre}}</h1>
 
     {{film.titre}} paru le {{film.date_parution}} et est de type {{film.cat}}
+
         {% load static %}
     <p>
         {{film.resume}}
 
     </p>
-
+<img src="{{film.imaurl}}"
 
 {% endblock %}

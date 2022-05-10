@@ -5,14 +5,16 @@ from . import models
 class FilmForm(ModelForm):
     class Meta:
         model = models.Film
-        fields = ('titre', 'realisateur', 'date_parution','dure','resume','cat')
+        fields = ('titre', 'realisateur', 'date_parution','dure','resume','cat','imaurl',)
         labels = {
             'titre': _('Titre'),
             'realisateur': _('Réalisateur'),
             'date_parution': _('Date de parution'),
             'dure': _('Duré du film'),
             'remume': _('Résumé'),
-            'cat': _('Catégorie')
+            'cat': _('Catégorie'),
+            'imaurl': _('Image avec Url')
+
         }
 
 class SiteForm(ModelForm):

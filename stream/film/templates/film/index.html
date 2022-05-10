@@ -3,11 +3,9 @@
 {% block content %}
 <body>
 <h1> Bienvenue sur la bibliothèque de film: </h1>
-
-
 <ol>
     {% for l in liste %}
-    <li> <p class="titre">Titre: {{l.titre}}<br></p>
+    <li> <p class="ti">Titre: {{l.titre}}</p>
             <p>Écrit par {{l.realisateur}} aparue le {{l.date_parution}},dans la catégorie {{l.cat}} et d'une durée de {{l.dure}} minutes. Pour le résumé click sur affiche ->
 
             <a href="/stream/affiche/{{l.id}}/">affiche</a>
