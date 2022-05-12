@@ -5,9 +5,9 @@
 {% block content %}
 
     <h1>Résumé du film {{film.titre}}</h1>
-    <h2><a href="/stream/">Retour</a> </h2>
+    <h2><a class="retour" href="/stream/">Retour</a> </h2>
 
-    {{film.titre}} paru le {{film.date_parution}} et est de type {{film.cat}}
+    <p class="ti">{{film.titre}} paru le {{film.date_parution}} et est de type {{film.cat}}</p>
 
         {% load static %}
     <p>
@@ -17,3 +17,5 @@
 <img src="{{film.imaurl}}">
 
 {% endblock %}
+
+<!-- Voici ma page Affiche des films ou on peut voir le résumer du film ainsi qu'une image de l'affiche du film.-->

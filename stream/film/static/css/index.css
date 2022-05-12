@@ -1,17 +1,19 @@
 body{
-    background-color : #002D62;
+    background-color :#55558F;
     width: 80%;
     margin: auto;
 }
 
 h1{
-text-align: center;
-text-shadow: 1px 1px #007FFF;
+    text-align: center;
+    text-shadow: 1px 1px #007FFF;
+    font-family: sans-serif;
+    font-size: 235%;
+    color:#fff5ee;
 }
 
 section{
-text-align: center;
-
+    text-align: center;
 }
 
 nav{
@@ -25,14 +27,35 @@ nav a{
     display: table-cell;
     width: 3%;
     text-align: center;
+    text-decoration : none;
+    font-weight: bold;
+    color:black;
+    font-size: 120%;
 
-   text-decoration : none;
-   font-weight: bold;
+}
+.ti a{
+    font-weight: bold;
+    color:#FFC0CB;
 }
 
-p{
+a{
+color:#ba55d3;
+font-weight: bold;
+}
 
-    color:black;
+h2 a{
+    color:#FF69B4;
+}
+
+
+p{
+    font-family: sans-serif;
+    font-size: 120%;
+    color:#fff5ee;
+}
+p a{
+    color:FF69B4;
+    font-weight: bold;
 }
 
 img{
@@ -47,9 +70,10 @@ footer{text-align: center;
     background-color:#7CB9E8;
     margin: 3px;
     font-weight: bold;
-
 }
 
-.ti{
-    font-weight: bold;
-}
+
+
+/*Voici donc mon css une peut dificile a commenter mais voila ca fonctionne c'est tout ce que je peux dire :) */
+
+

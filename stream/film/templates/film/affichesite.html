@@ -8,7 +8,7 @@
     <h1>Détail du site: {{site.titre}}</h1>
  <h2><a href="/stream/indexsite/">Retour</a> </h2>
 
-    {{site.titre}} dont l'url est :  {{site.url}}
+    <p class="ti">{{site.titre}} dont l'url est :  <a href="{{site.url}}">{{site.url}}</a></p>
 
     <p>
         {{site.resume}}
@@ -17,3 +17,7 @@
 
 
 {% endblock %}
+
+
+<!-- Voici ma page Affiche Site pour les détails des sites de streaming,
+ où on peut voir l'URL du site ainsi qu'un petit résumer.-->

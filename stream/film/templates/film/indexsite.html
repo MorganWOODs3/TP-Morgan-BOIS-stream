@@ -8,12 +8,18 @@
 
 <ol>
     {% for l in liste %}
-    <li> <p class="ti">{{l.titre}}</p>
-            <a href="/stream/affichesite/{{l.id}}/">affiche</a>
+    <li>
+        <p class="ti"><a href="{{l.url}}">{{l.titre}}</a></p>
+        <p><a href="/stream/affichesite/{{l.id}}/">affiche</a>
             <a href="/stream/updatesite/{{l.id}}/">update</a>
-            <a href="/stream/deletesite/{{l.id}}/">delete</a>
+            <a href="/stream/deletesite/{{l.id}}/">delete</a></p>
+
+
+
         </li>
     {% endfor %}
 </ol>
 {% endblock %}
 
+<!-- Voici ma page Index Site c'est là où sont regroupé tous les sites de streamings que j'ai pu ajouter,
+et aussi trois boutons pour soi afficher les détails du site soit update pour modifier les détails et un bouton pour supprimer le site.-->
