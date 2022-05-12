@@ -3,8 +3,9 @@
 
     <title>affichage {{film.titre}}</title>
 {% block content %}
-<body>
+
     <h1>Résumé du film {{film.titre}}</h1>
+    <h2><a href="/stream/">Retour</a> </h2>
 
     {{film.titre}} paru le {{film.date_parution}} et est de type {{film.cat}}
 
@@ -13,6 +14,6 @@
         {{film.resume}}
 
     </p>
-<img src="{{film.imaurl}}"
+<img src="{{film.imaurl}}">
 
 {% endblock %}

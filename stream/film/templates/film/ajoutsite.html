@@ -1,8 +1,9 @@
 {% extends 'film/main.html' %}
     <title>Formulaire de saisi</title>
 {% block content %}
-<body>
+
 <h1>Saisie d'un nouveau film: </h1>
+<h2><a href="/stream/">Retour à la Bibliothèque</a> </h2>
  <section>
     {% if id == None %}
         <form method="post" action="/stream/revusite/">
@@ -14,7 +15,6 @@
       <input type="submit" value="envoyer les données"/>
      </form>
 
- </section>
-</body>
-</html>
+  </section>
+
 {% endblock %}

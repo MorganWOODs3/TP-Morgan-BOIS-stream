@@ -72,7 +72,7 @@ def revusite(request):
     lform = SiteForm(request.POST)
     if lform.is_valid():
         site = lform.save()
-        return HttpResponseRedirect("/stream/")
+        return HttpResponseRedirect("/stream/indexsite")
     else :
         return render(request, "film/ajoutsite.html", {"form": lform})
 

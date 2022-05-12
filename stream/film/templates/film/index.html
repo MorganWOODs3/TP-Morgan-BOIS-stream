@@ -1,8 +1,9 @@
 {% extends 'film/main.html' %}
     <title>index</title>
 {% block content %}
-<body>
+
 <h1> Bienvenue sur la bibliothèque de film: </h1>
+<h2><a href="/stream/ajout/">Ajout d'un nouveau film</a> </h2>
 <ol>
     {% for l in liste %}
     <li> <p class="ti">Titre: {{l.titre}}</p>
@@ -15,7 +16,6 @@
         </li>
     {% endfor %}
 </ol>
-</body>
-</html>
+
 {% endblock %}
 
