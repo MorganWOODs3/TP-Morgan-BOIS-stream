@@ -18,7 +18,7 @@ class Film(models.Model):
     dure = models.IntegerField(blank=False)
     cat = models.CharField(max_length=30, choices=cat)
     resume = models.TextField(null=True, blank=True)
-    imaurl=models.URLField(max_length=300)
+    imaurl = models.URLField(max_length=300)
 
 
 
@@ -41,8 +41,3 @@ class Site(models.Model):
 
         def dico(self):
             return {"titre": self.titre, "realisateur": self.url, "resume": self.resume}
-
-
-
-
-
