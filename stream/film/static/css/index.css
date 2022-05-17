@@ -53,6 +53,8 @@ p{
     font-size: 120%;
     color:#fff5ee;
 }
+
+
 p a{
     color:FF69B4;
     font-weight: bold;
@@ -64,14 +66,18 @@ img{
   margin-left: auto;
   margin-right: auto;
 }
-footer{text-align: center;
+footer{
+    text-align: center;
     display: table;
     width: 100%;
     background-color:#7CB9E8;
     margin: 3px;
     font-weight: bold;
 }
-
+article{
+    font-size: 120%;
+    text-align: center;
+}
 
 
 /*Voici donc mon css une peut difficile a commenter mais voila ca fonctionne c'est tout ce que je peux dire :) */

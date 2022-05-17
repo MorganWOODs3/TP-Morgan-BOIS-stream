@@ -19,8 +19,7 @@ class Film(models.Model):
     cat = models.CharField(max_length=30, choices=cat)
     resume = models.TextField(null=True, blank=True)
     imaurl = models.URLField(max_length=300)
-
-
+    site = models.ForeignKey("site", on_delete=models.CASCADE, default=None)
 
 
     def __str__(self):
@@ -28,7 +27,7 @@ class Film(models.Model):
         return chaine
 
     def dico(self):
-        return {"titre" : self.titre, "realisateur" : self.realisateur, "date_parution" : self.date_parution, "dure" : self.dure, "resume" : self.resume, "cat" : self.cat}
+        return {"titre" : self.titre, "realisateur" : self.realisateur, "date_parution" : self.date_parution, "dure" : self.dure, "resume" : self.resume, "cat" : self.cat, "site" : self.site}
 
 class Site(models.Model):
         titre = models.CharField(max_length=100)
@@ -36,7 +35,7 @@ class Site(models.Model):
         resume = models.TextField(null=True, blank=True)
 
         def __str__(self):
-            chaine = f"Titre: {self.titre} écrit par {self.url} et le résumé est {self.resume} ."
+            chaine = f"{self.titre}"
             return chaine
 
         def dico(self):
