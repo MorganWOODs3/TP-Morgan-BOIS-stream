@@ -15,7 +15,7 @@ def revu(request):
     lform = FilmForm(request.POST)
     if lform.is_valid():
         film = lform.save()
-        return HttpResponseRedirect("/stream/")
+        return HttpResponseRedirect("/stream/index")
     else :
         return render(request, "film/ajout.html", {"form": lform})
 
@@ -42,14 +42,14 @@ def updaterevu(request, id):
         film = lform.save(commit = False)
         film.id = id
         film.save()
-        return HttpResponseRedirect("/stream/")
+        return HttpResponseRedirect("/stream/index")
     else:
         return render(request, "film/ajout.html", {"form": lform, "id": id})
 
 def delete(request, id):
     film = models.Film.objects.get(pk=id)
     film.delete()
-    return HttpResponseRedirect("/stream/")
+    return HttpResponseRedirect("/stream/index")
 
 
 
